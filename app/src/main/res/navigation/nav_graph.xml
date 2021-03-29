@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/listOfMoviesFragment">
+
+    <fragment
+        android:id="@+id/listOfMoviesFragment"
+        android:name="islom.din.themoviedb.ListOfMoviesFragment"
+        android:label="fragment_listofmovies"
+        tools:layout="@layout/fragment_listofmovies" >
+        <action
+            android:id="@+id/action_listOfMoviesFragment_to_movieFragment"
+            app:destination="@id/movieFragment"
+            app:popUpTo="@id/listOfMoviesFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="moviePosition"
+                android:defaultValue="0" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="islom.din.themoviedb.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <argument
+            android:name="moviePosition"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

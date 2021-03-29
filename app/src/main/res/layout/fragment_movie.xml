@@ -1,14 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#000000"
     tools:context=".MovieFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/back_button" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/toolbar"
+        android:alpha="0.1"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/picture" />
+
+    <RelativeLayout
+        android:id="@+id/top_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/toolbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_block"
+            android:layout_width="170dp"
+            android:layout_height="250dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/picture" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_block"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/image_block"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:text="Игра Престолов" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                tools:text="2011-05-06" />
+
+            <TextView
+                android:id="@+id/popularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/teal_200"
+                tools:text="Popularity: 5436.012" />
+
+            <TextView
+                android:id="@+id/vote_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/teal_200"
+                tools:text="Vote count: 7243" />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/teal_200"
+                tools:text="Country: US" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_block"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="7.8"
+            android:textColor="@color/teal_200"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/overview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/top_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="After years of facing megalomaniacal supervillains, monsters wreaking havoc on Metropolis, and alien invaders intent on wiping out the human race, The Man of Steel aka Clark Kent and Lois Lane come face to face with one of their greatest challenges ever: dealing with all the stress, pressures and complexities that come with being working parents in today's society." />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:src="@drawable/like"
+        app:rippleColor="@color/white" />
 
 </RelativeLayout>

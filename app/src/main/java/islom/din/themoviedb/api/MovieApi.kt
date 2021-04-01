@@ -1,5 +1,6 @@
-package islom.din.themoviedb
+package islom.din.themoviedb.api
 
+import islom.din.themoviedb.Root
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

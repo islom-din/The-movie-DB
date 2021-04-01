@@ -1,4 +1,4 @@
-package islom.din.themoviedb
+package islom.din.themoviedb.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,11 +7,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.fragment_movie.*
+import islom.din.themoviedb.MovieViewModel
+import islom.din.themoviedb.R
+import islom.din.themoviedb.Result
 import kotlinx.android.synthetic.main.fragment_movie.view.*
 
 
-class MovieFragment : Fragment(R.layout.fragment_movie) {
+class MovieDetailsFragment : Fragment(R.layout.fragment_movie) {
 
     private lateinit var movieViewModel: MovieViewModel
     private var moviePosition: Int? = 0

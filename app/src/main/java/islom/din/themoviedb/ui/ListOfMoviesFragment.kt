@@ -1,4 +1,4 @@
-package islom.din.themoviedb
+package islom.din.themoviedb.ui
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import islom.din.themoviedb.MovieAdapter
+import islom.din.themoviedb.MovieViewModel
+import islom.din.themoviedb.R
 import kotlinx.android.synthetic.main.fragment_listofmovies.*
 
 class ListOfMoviesFragment : Fragment(R.layout.fragment_listofmovies) {

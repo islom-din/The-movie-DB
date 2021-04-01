@@ -1,4 +1,4 @@
-package islom.din.themoviedb
+package islom.din.themoviedb.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
